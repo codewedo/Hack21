@@ -46,7 +46,7 @@ int main() {
 	int n, m, q;
 	cin >> n >> m >> q;
 
-	//int u, v, wt;
+	int u, v, wt;
 	vector<vector<pair<int, int>>> g(n, vector<pair<int, int>> ());
 
 	for (int i = 0; i < m; i++) {
