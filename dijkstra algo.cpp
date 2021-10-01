@@ -44,7 +44,7 @@ int main() {
     cin.tie(NULL);
     cout.tie(NULL);
 	int n, m, q;
-	//cin >> n >> m >> q;
+	cin >> n >> m >> q;
 
 	//int u, v, wt;
 	vector<vector<pair<int, int>>> g(n, vector<pair<int, int>> ());
