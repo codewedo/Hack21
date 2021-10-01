@@ -18,7 +18,7 @@ void dijkstra(int src, vector<vector<pair<int, int>>> &g, vector<pair<int, int> 
 		for (auto v : g[u]) {
 			if (spt.find(v.first) == spt.end() && dist[u] + v.second < dist[v.first]) {
 				dist[v.first] = dist[u] + v.second;
-			   
+			    	q.push(make_pair(v.second, v.first));
 			} 
 		}
 	}
