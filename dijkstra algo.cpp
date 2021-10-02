@@ -57,7 +57,7 @@ int main() {
 
 	int src;
 	vector<pair<int, int>> ans(g.size(), {0 , 0});
-	//while(q++) {
+	while(q++) {
 		cin >> src;
 		if (ans[src].first == 0 && ans[src].second == 0)
 		    dijkstra(src, g, ans);
