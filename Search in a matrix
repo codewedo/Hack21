@@ -8,7 +8,7 @@ The first integer of each row is greater than the last integer of the previous r
 class Solution {
 public:
     
-    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+    bool searchMatrix(vector<vector<int>>& matrix, int key) {
         int st = 0, en = matrix.size() * matrix[0].size() - 1;
         
         while(st <= en) {
