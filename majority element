@@ -19,6 +19,11 @@ public:
             }
         }
         
+        cnt1 = 0, cnt2 = 0;
+        for (auto no : nums) {
+            if (no == num1) cnt1++;
+            if (no == num2) cnt2++;
+        }
        
         vector<int> ans;
         
