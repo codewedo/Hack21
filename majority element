@@ -6,7 +6,7 @@ public:
         for (auto no : nums) {
             if (no == num1) cnt1++;
             else if (no == num2) cnt2++;
-            else if (cnt1 == INT_MIN) {
+            else if (cnt1 == 0) {
                 num1 = no;
                 cnt1 = 1;
             }
