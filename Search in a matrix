@@ -19,7 +19,7 @@ public:
             if (matrix[i][j] == key) {
                 return true;
             }
-            else if (matrix[i][j] > key) {
+            else if (matrix[i][j] < key) {
                 st = mid + 1;
             }
             else {
