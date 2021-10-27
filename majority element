@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
-        int num1 = INT_MIN, num2 = INT_MIN, cn1 = 0, cn2 = 0;
+        int num1 = INT_MIN, num2 = INT_MIN, cnt1 = 0, cnt2 = 0;
         
         for (auto no : nums) {
             if (no == num1) cnt1++;
