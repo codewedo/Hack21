@@ -4,3 +4,27 @@ Write an efficient algorithm that searches for a value in an m x n matrix. This 
 Integers in each row are sorted from left to right.
 The first integer of each row is greater than the last integer of the previous row.
 */
+
+class Solution {
+public:
+    
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        int st = 0, en = matrix.size() * matrix[0].size() - 1;
+        
+        while(st <= en) {
+            int mid = (st + en)/2;
+            auto res = getIndex(mid, matrix[0].size());
+            int i = res[0], j = res[1];
+            
+            if (matrix[i][j] == key) {
+                return true;
+            }
+            else if (matrix[i][j] > key) {
+                st = mid + 1;
+            }
+            else {
+                en = mid - 1;
+            }
+        }
+    }
+};
