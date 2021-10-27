@@ -12,6 +12,7 @@ public:
             }
             else if (cnt2 == INT_MIN) {
                 num2 = no;
+                cnt2 = 1;
             }
             else {
                 cnt1--;
