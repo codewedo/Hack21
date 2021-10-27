@@ -10,7 +10,7 @@ public:
                 num1 = no;
                 cnt1 = 1;
             }
-            else if (cnt2 == INT_MIN) {
+            else if (cnt2 == 0) {
                 num2 = no;
             }
             else {
