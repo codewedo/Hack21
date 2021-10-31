@@ -18,6 +18,8 @@ public:
         } 
         
         int diff = len1 - len2;
+        cur1 = headA;
+        cur2 = headB;
         
         if (diff > 0) {
             while(diff-- && cur1 != NULL) {
