@@ -14,7 +14,7 @@ public:
         
         while(cur2) {
             len2++;
-            cur2 = cur2->next;
+            cur2 = cur1->next;
         } 
         
         int diff = len1 - len2;
@@ -25,12 +25,12 @@ public:
             }
         }
         else if (diff <= 0) {
-            while(diff-- && cur2) {
+            while(diff && cur2) {
                 cur2 = cur2->next;
             }
         }
         
-        while(cur1 != cur2) {
+        while(cur1!= NULL && cur2 != NULL && curcur1 != cur2) {
             cur1 = cur1->next;
             cur2 = cur2->next;
         }
