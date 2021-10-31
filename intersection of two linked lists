@@ -1,4 +1,41 @@
 /* Given the heads of two singly linked-lists headA and headB, 
 return the node at which the two lists intersect. 
-If the two linked lists have no intersection at all, return null.*/
+If the two linked lists have no intersection at all, return null.*/class Solution {
+public:
+    
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        int len1 = 0, len2 = 0;
+        ListNode* cur1 = headA, *cur2 = headB;
+        
+        while(cur1) {
+            len1++;
+            cur1 = cur1->next;
+        }
+        
+        while(cur2) {
+            len2++;
+            cur2 = cur1->next;
+        } 
+        
+        int diff = len1 - len2;
+        
+        if (diff > 0) {
+            while(diff-- && cur1 != NULL) {
+                cur1 = cur1->next;
+            }
+        }
+        else if (diff <= 0) {
+            while(diff && cur2) {
+                cur2 = cur2->next;
+            }
+        }
+        
+        while(cur1 != cur2) {
+            cur1 = cur1->next;
+            cur2 = cur2->next;
+        }
+        
+        return cur1;
+    }
+};
 
