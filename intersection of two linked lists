@@ -14,7 +14,7 @@ public:
         
         while(cur2) {
             len2++;
-            cur2 = cur1->next;
+            cur2 = cur2->next;
         } 
         
         int diff = len1 - len2;
